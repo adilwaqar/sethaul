@@ -1,0 +1,67 @@
+default_agent: test_harness
+agents:
+  test_harness:
+    name: test_harness
+    language: python
+    node_version: null
+    entrypoint: C:/Users/HP/Documents/Sethaul/server/agentcore/handler.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: null
+    aws:
+      execution_role: arn:aws:iam::362546016596:role/AmazonBedrockAgentCoreSDKRuntime_Generic
+      execution_role_auto_create: false
+      account: '362546016596'
+      region: us-east-1
+      ecr_repository: 362546016596.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-test_harness
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: VPC
+        network_mode_config:
+          security_groups:
+          - sg-0ffed0f9f1b98e4c5
+          subnets:
+          - subnet-04c83faca56b86903
+          - subnet-01a3188da0f2709be
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: 180
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: test_harness-Dp40P93dIh
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:362546016596:runtime/test_harness-Dp40P93dIh
+      agent_session_id: null
+    codebuild:
+      project_name: bedrock-agentcore-test_harness-builder
+      execution_role: arn:aws:iam::362546016596:role/AmazonBedrockAgentCoreSDKCodeBuild_Generic
+      source_bucket: bedrock-agentcore-codebuild-sources-362546016596-us-east-1
+    memory:
+      mode: STM_ONLY
+      memory_id: test_harness_mem-u6wEV2BlFT
+      memory_arn: arn:aws:bedrock-agentcore:us-east-1:362546016596:memory/test_harness_mem-u6wEV2BlFT
+      memory_name: test_harness_mem
+      event_expiry_days: 30
+      first_invoke_memory_check_done: true
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
