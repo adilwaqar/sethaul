@@ -16,12 +16,14 @@ function ChatHeader({ sessionId, driverName, onNewSession, onLogout }: ChatHeade
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.8"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <rect x="1" y="3" width="15" height="13" rx="2" />
-            <path d="M16 8h4a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4" />
+            <path d="M14 17H2V6a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v11z" />
+            <path d="M14 9h4l3 4v4h-7V9z" />
+            <circle cx="6" cy="19" r="2" />
+            <circle cx="17.5" cy="19" r="2" />
           </svg>
         </div>
         <div className="chat-header__info">

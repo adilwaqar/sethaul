@@ -208,7 +208,12 @@ function ChatScreen({ driver, onLogout }: ChatScreenProps) {
 
       <div className="chat-layout">
         <div className="chat-layout__main">
-          <ChatWindow messages={messages} isLoading={isLoading} />
+          <ChatWindow
+            messages={messages}
+            isLoading={isLoading}
+            onSuggestion={chatDisabled ? undefined : handleSend}
+            driverName={driver.driver_name}
+          />
           {error && (
             <div className="error-banner">
               <span>{error}</span>
